@@ -1,0 +1,16 @@
+{% assign tpbPSLMP = '72ee2bacc8203b23e8122fdcb3567d18aa81a0c9860a4dff962a5f9e2dc78bd4aa81a0c9860a4dff962a5f9e2dc78bd4211eeb5e256db68a5f383da71b36ed89fa655aec69e92a88c1fcf5db7ba964277ffdef83d70f81b636c3aa2661d2819647c7a17d9ad4e0e500da86adbb5c02901840e0f6f483ff1fcbf11e7b5a9f56d9f6aa426bb936093e6472e729638faafabfc1867613ef513851a6e0cc5ce62f8afa655aec69e92a88c1fcf5db7ba964277ffdef83d70f81b636c3aa2661d2819647c7a17d9ad4e0e500da86adbb5c02901840e0f6f483ff1fcbf11e7b5a9f56d972ee2bacc8203b23e8122fdcb3567d18aa81a0c9860a4dff962a5f9e2dc78bd4aa81a0c9860a4dff962a5f9e2dc78bd4211eeb5e256db68a5f383da71b36ed89,/,,/collections/all,/search,/products/choker-with-bead,/collections/frontpage,/products/chain-bracelet,/products/leather-anchor,/products/bangle-bracelet,/products/bangle-bracelet-with-feathers,/products/boho-earrings,/products/choker-with-gold-pendant,/products/choker-with-triangle,/products/dainty-gold-neclace,/products/dreamcatcher-pendant-necklace,/products/galaxy-earrings,/products/gemstone,/products/gold-bird-necklace,/products/looped-earrings,/products/guardian-angel-earrings,/products/moon-charm-bracelet,/products/origami-crane-necklace,/products/pretty-gold-necklace,/products/silver-threader-necklace,/products/stylish-summer-neclace,/blogs/news/s-dfasdf-sadf,/blogs/news/2,/blogs/news/3,/pages/appi-privacy-policy,/pages/ccpa-privacy-policy,/pages/contact,/pages/gdpr-privacy-policy,/pages/avada-sitemap,/pages/avada-sitemap-articles,/pages/avada-sitemap-blogs,/pages/avada-sitemap-collections,/pages/avada-sitemap-pages,/pages/avada-sitemap-products,/pages/lgpd-privacy-policy,/pages/pipeda-privacy-policy'
+  | split: ','
+-%}
+{%- assign tpbRPWNL = request.path | url_decode %}
+{% if request.locale.root_url != '/' %} {% assign tpbRPWNL = tpbRPWNL | remove: request.locale.root_url %} {% endif %}
+{% assign tpbRPWNLSpPUrl = 'fa07a05b758d44ca3d5248f6f2e9eb17' %}
+{% if product %} {% assign tpbRPWNLSpPUrl = product.url %} {% endif %}
+{% if collection %} {% assign tpbRPWNLScCUrl = collection.url %} {% endif %}
+{% if tpbPSLMP contains tpbRPWNL or tpbPSLMP contains tpbRPWNLSpPUrl or tpbPSLMP contains tpbRPWNLScCUrl %}
+  {% assign tapitaPageSpeedStatus = true %}
+  <script>
+    window.technicalTptCast="j49nm6w7nct0s2cmdzy5j3,6ccmej-ka1qwhoz46qa8o1,j0akqxg5jiwf62cv,xo.wv4e8.6eawhoz,sssaxo.wv4e8.6eawhoz,679bwsxcwp.gzqkbb.rx";
+  </script>
+{% else -%}
+  {%- assign tapitaPageSpeedStatus = true -%}
+{%- endif %}
